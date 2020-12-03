@@ -37,10 +37,9 @@ class CompanyEmpWage
         this.totalEmpWage = totalEmpWage;
     }
 
-    @Override
+    //Override
     public String toString() {
         System.out.println("Details of " + COMPANY_NAME + " employee");
-        System.out.println("-----------------------------------------------------");
         System.err.println("Wage per hour:" + WAGE_PER_HR);
         System.out.println("Maximum working days:" + MAX_WORKING_DAYS);
         System.out.println("Maximum working hours:" + MAX_WORKING_HRS);
@@ -107,7 +106,7 @@ class EmployeeWageComputation implements IEmployeeWageComputation
     {
         System.out.println("Computation of total wage of " + companyEmpWage.COMPANY_NAME + " employee");
         System.out.println("-----------------------------------------------------");
-        System.out.printf("%4s\t%4s\t%2s\t%4s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
+        System.out.printf("%s:\t%s\t%s\t%s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
 
         int workingHrs, totalWage = 0;
         for (int day = 1, totalWorkingHrs = 0; day <= companyEmpWage.MAX_WORKING_DAYS
@@ -117,7 +116,7 @@ class EmployeeWageComputation implements IEmployeeWageComputation
             workingHrs = getWorkingHrs(empType);
             int wage = workingHrs * companyEmpWage.WAGE_PER_HR;
             totalWage += wage;
-            System.out.printf("%4d\t%5d\t%10d\t%10d\n", day, workingHrs, wage, totalWorkingHrs + workingHrs);
+            System.out.printf("%d:\t%d\t%d\t%d\n", day, workingHrs, wage, totalWorkingHrs + workingHrs);
         }
         totalEmpWages.put(companyEmpWage.COMPANY_NAME, totalWage);
         return totalWage;
