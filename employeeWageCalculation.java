@@ -2,7 +2,7 @@
 
 public class EmployeeWageComputation
 {
-    public static void calculateTotalWage()
+    public static void calculateTotalWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs)
     {
         final int PART_TIME = 1;
         final int FULL_TIME = 2;
@@ -40,6 +40,10 @@ public class EmployeeWageComputation
 
     public static void main(String args[])
     {
-        calculateTotalWage();
+        calculateTotalWage("Apple", 20,23,300);
+        calculateTotalWage("Amazon", 40, 15, 200);
+        calculateTotalWage("BigBazar", 21, 20, 100);
+        calculateTotalWage("Reliance", 11,24,250);
+        
     }
 }
