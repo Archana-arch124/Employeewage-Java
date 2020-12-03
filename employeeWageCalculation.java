@@ -105,7 +105,6 @@ class EmployeeWageComputation implements IEmployeeWageComputation
     int calculateTotalWage(CompanyEmpWage companyEmpWage) 
     {
         System.out.println("Computation of total wage of " + companyEmpWage.COMPANY_NAME + " employee");
-        System.out.println("-----------------------------------------------------");
         System.out.printf("%s:\t%s\t%s\t%s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
 
         int workingHrs, totalWage = 0;
